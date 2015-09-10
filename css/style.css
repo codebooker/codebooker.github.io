@@ -233,7 +233,7 @@ a:focus {
 
 /* loader */
 #preloader {
-    background: #ffffff;
+    background: lightgray;
     bottom: 0;
     height: 100%;
     left: 0;

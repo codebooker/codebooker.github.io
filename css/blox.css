@@ -1,0 +1,241 @@
+* { outline: 0; }
+
+body {
+	background: white;
+}
+
+p {
+	font-family:'DINEngschriftStd', Sans-Serif;
+	font-size: 11.16px;
+	margin-bottom: 0 !important;
+}
+
+hr {
+	border-top: 1px solid white;
+	border-bottom: 1px solid #fff;
+	height: 0px;
+}
+
+hr.tight { margin: 30px 0 0 0; }
+
+h2 {
+	color: black;
+	font-family: PFDinDisplayProMedium;
+	font-size: 18px;
+	line-height: 0.9em;
+	text-transform: uppercase;
+}
+
+a {
+	border-bottom: 0px dotted #6c6c6c;
+	color: #6c6c6c;
+	padding-bottom: 2px;
+}
+
+a:hover {
+	border-bottom: 0px dotted #888;
+	color: #888;
+}
+
+#blox-header-wrapper {
+	width: 675px;
+	margin: 0 auto;
+}
+
+#blox-header {
+	padding-top: 10px;
+	height: 40px;
+	background-color: white;
+}
+
+#blox-content {
+	margin: 40px auto;
+	width: 675px;
+	background: white;
+}
+
+#blox {
+	width: 675px;
+	height: 500px;
+	cursor: pointer;
+}
+
+#page-title {
+	width: 560px;
+}
+
+#page-title h2 {
+	font-size: 20px;
+	font-family:'DINEngschriftStd', Sans-Serif;
+}
+
+#balls-block {
+	font-family:'DINEngschriftStd', Sans-Serif;
+	font-size: 14px;
+	color: #949494;
+}
+
+#balls,
+#score {
+	font-family:'DINEngschriftStd', Sans-Serif;
+	color: black;
+	background-color: white;
+	font-size: 18px;
+}
+
+#fps {
+	display: none;
+	visibility: hidden;
+}
+
+#init {
+	
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	z-index: 100;
+}
+
+#init {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	z-index: 100;
+}
+
+#init-content {
+	position: relative;
+	top: 425px;
+	margin: 0 auto;
+	z-index: 101;
+	padding-top: 300px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: white;
+	padding: 5px;
+}
+
+#overlay-content {
+	position: absolute;
+	top: 220px;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 101;
+	color: black;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.entry
+{
+	font-family: 'DINEngschriftStd', Sans-Serif;
+	font-size: 18px;
+	color: black;
+	text-transform: uppercase;
+	color: black;
+}
+
+.entry input {
+	margin-left: 20px;
+	background-color: white;
+	padding: 5px;
+	border: 0;
+	font-family: 'PFDinDisplayProMedium', Sans-serif;
+	font-size: 14px;
+	color: black;
+}
+
+#gameover {
+	margin-bottom: 100px;
+	text-align: center;
+}
+#gameover img{ display: inline-block;}
+
+.fleft { float: left; }
+.fright { float: right; }
+.upper { text-transform: uppercase; }
+.padded { padding: 5px 10px; }
+.clearfix { clear: both; }
+.center { text-align: center; margin: 0 auto; }
+.lower { margin-top: 20px !important; }
+.split { margin-left: 5px; }
+.large-split { margin-left: 30px; }
+
+.key {
+	font-family:'DINEngschriftStd', Sans-Serif;
+	font-size: 12px;
+}
+
+.even .name,
+.even .score,
+.even .date { background-color: white; }
+
+.blox-info {
+	margin: 0 auto;
+	width: 675px;
+}
+
+.name,
+.score,
+.date {
+	font-family:'DINEngschriftStd', Sans-Serif;
+	font-size: 18px;
+	color: #8d8d8d;
+	float: left;
+	padding: 10px;
+}
+
+.name,
+.score {
+	margin-right: 2px;
+}
+
+.score,
+.date {
+	margin-left: 2px;
+}
+
+.score { width: 75px; }
+.name { width: 150px; }
+.date { width: 370px; }
+
+.date { text-align: right; }
+.score { text-align: center; }
+
+.rounded {
+	border-radius: 3px;
+	border: 1px solid black;
+	color: black;
+	padding: 5px 8px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.purple {
+	font-family:'DINEngschriftStd', Sans-Serif;
+	font-size: 18px;
+	color: black;
+}
+
+.small-purple {
+	margin-top: 8px;
+	font-family: PFDinDisplayProMedium;
+	font-size: 11px;
+	color: black;
+}
+
+.spaced { padding: 5px 40px; }
+
+.instructions { padding-top: 5px; }

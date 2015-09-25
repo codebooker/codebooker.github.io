@@ -57,7 +57,6 @@ html {
     height: 100%;
 }
 
-
 //full screen
 @media (min-width:0px) {
 
@@ -152,7 +151,7 @@ a:focus {
 
 .nav.navbar-nav {
     background-color: rgba(255,255,255,.4);
-    padding-bottom: 25px;
+    padding-bottom: 0px;
 }
 
 .navbar-custom.top-nav-collapse .nav.navbar-nav {
@@ -407,7 +406,7 @@ hr {
 }
 
 .bg-cool {
-	background: #009999;
+	background: #A03700;
 }
 
 
@@ -440,7 +439,6 @@ hr {
 
 .intro .slogan {
 	text-align: center;
-
 }
 
 .intro .page-scroll {

@@ -27,7 +27,6 @@
     <!-- Squad theme CSS -->
     <link href="css/style.css" rel="stylesheet">
 	<link href="color/default.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
@@ -98,7 +97,7 @@
 		<script src="http://lubie.co/wp-content/themes/lubie/404/js/ball.js"></script>
 		<script src="http://lubie.co/wp-content/themes/lubie/404/js/pill.js"></script>
 		<script src="http://lubie.co/wp-content/themes/lubie/404/js/player.js"></script>
-		<script src="http://lubie.co/wp-content/themes/lubie/404/levels/404.js"></script>
+		<script src="js/404.js"></script>
 		<script type="text/javascript">
   
 
@@ -113,18 +112,32 @@
   })();
 
 </script>
-	</head>
+    
+    <script type='text/javascript'>
+    $(function(){
+      $("#infor").delay(8500).fadeOut("slow");
+    });
+    </script>
+	
+    </head>
 	<body>
 <!--<
-//Created by Lubie.co
+//From This Line on is created by Lubie.co
 //I do not own nor do I take ANY credit for the code seen herein.
-//Just restating, this code is by and for lubie.co>-->
-		
+//Just restating, this code is by and for lubie.co
+>-->
+        <div id="infor">
+            <div class="col-sm-12">
+                <h1>
+                    <font color="black">Well.... You got a 404 error,<br> at least this one lets you play a game</font>
+                </h1>
+            </div>
+        </div>
 		<div id="popup">
 			<div class="overlay"></div>
 			<div id="overlay-content">
 				<div id="gameover"><img src="img/gameover.png" alt="Game Over" /></div>
-				<div style="font-size: 16pt; color: black" onclick="location.href='http://new.djspecx.com'">Return to Home Page</div>
+                <div><a href="http://new.djspecx.com"><font size="5" color="teal"><strong>Return to Home Page</strong></font></a></div>
 		</div>
 		</div>
 				
@@ -165,12 +178,6 @@
 				<div id="score" class="fright padded"></div>
 				<div class="fright upper padded purple">Points</div>
 			</div>
-			<div class="clearfix"></div>
-		</div>
-		<hr class="tight" />
-		<div class="blox-info">
-			<div id="scoreboard"></div>
-			<div class="clearfix"></div>
 		</div>
 	</body>
 </html>

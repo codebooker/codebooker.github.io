@@ -16,11 +16,6 @@ html {
     height: 100%;
 }
 
-canvas {
-    position: absolute;
-    display: block;
-}
-
 .videoplayer{
 
     text-align: center;
@@ -168,7 +163,7 @@ a:focus {
 .navbar-custom ul.nav li a {
 	font-size: 12px;
 	letter-spacing: 1px;
-    color: black;
+    color: #444;
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -412,7 +407,7 @@ hr {
 }
 
 .bg-cool {
-	background: darkred;
+	background: #A03700;
 }
 
 

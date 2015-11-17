@@ -1,10 +1,10 @@
 
 a,.tp-caption a.btn:hover {
-	color: #A03700;
+	color: darkred;
 }
 .top-nav-collapse {
-	background: #A03700;
-	border-color: #A03700;
+	background: darkred;
+	border-color: darkreddarkred;
 }
 
 .navbar-custom ul.nav ul.dropdown-menu li a:hover {
@@ -29,11 +29,11 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 }
 
 footer {
-    background-color: #A03700;
+    background-color: darkred;
 }
 
 .btn-skin {
   color: #fff;
-  background-color: #A03700;
-  border-color: #A03700;
+  background-color: darkred;
+  border-color: darkred;
 }

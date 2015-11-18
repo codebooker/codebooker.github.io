@@ -412,12 +412,14 @@ hr {
 }
 
 .bg-cool {
-	background: darkred;
+	background: #cc0000;
 }
 
 
 .bg-dark {
-	background: #575757;
+	width:100%;
+	position:relative;
+	background: url(../img/orn.jpg) center no-repeat;
 }
 
 /* --- section color var --- */

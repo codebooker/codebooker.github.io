@@ -1,10 +1,10 @@
 
 a,.tp-caption a.btn:hover {
-	color: #7e091b;
+	color: #492b49;
 }
 .top-nav-collapse {
-	background: #7e091b;
-	border-color: #7e091b;
+	background: #492b49;
+	border-color: #492b49;
 }
 
 .navbar-custom ul.nav ul.dropdown-menu li a:hover {
@@ -29,15 +29,15 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 }
 
 footer {
-    background-color: #7e091b;
+    background-color: #492b49;
 }
 
 .btn-skin {
   color: #fff;
-  background-color: #7e091b;
-  border-color: #7e091b;
+  background-color: #492b49;
+  border-color: #492b49;
 }
 
 themedcolor {
-  color: #7e091b;
+  color: #492b49;
 }

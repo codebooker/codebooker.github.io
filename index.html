@@ -28,105 +28,6 @@
   }
   //-->
 </script>
-<script type='text/javascript'>
-    $(function(){
-      $("#infomOOOOO").delay(7000).fadeOut("slow");
-    });
-    </script>
-    <script>$(document).ready(function(){
-window.onload = function(){
-	//canvas init
-	var canvas = document.getElementById("canvas");
-	var ctx = canvas.getContext("2d");
-	
-	//canvas dimensions
-	var W = window.innerWidth;
-	var H = window.innerHeight;
-	canvas.width = W;
-	canvas.height = H;
-	
-	//snowflake particles
-	var mp = 55; //max particles
-	var particles = [];
-	for(var i = 0; i < mp; i++)
-	{
-		particles.push({
-			x: Math.random()*W, //x-coordinate
-			y: Math.random()*H, //y-coordinate
-			r: Math.random()*4+1, //radius
-			d: Math.random()*mp //density
-		})
-	}
-	
-	//Lets draw the flakes
-	function draw()
-	{
-		ctx.clearRect(0, 0, W, H);
-		
-		ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
-		ctx.beginPath();
-		for(var i = 0; i < mp; i++)
-		{
-			var p = particles[i];
-			ctx.moveTo(p.x, p.y);
-			ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
-		}
-		ctx.fill();
-		update();
-	}
-	
-	//Function to move the snowflakes
-	//angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
-	var angle = 0;
-	function update()
-	{
-		angle += 0.01;
-		for(var i = 0; i < mp; i++)
-		{
-			var p = particles[i];
-			//Updating X and Y coordinates
-			//We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
-			//Every particle has its own density which can be used to make the downward movement different for each flake
-			//Lets make it more random by adding in the radius
-			p.y += Math.cos(angle+p.d) + 1 + p.r/2;
-			p.x += Math.sin(angle) * 2;
-			
-			//Sending flakes back from the top when it exits
-			//Lets make it a bit more organic and let flakes enter from the left and right also.
-			if(p.x > W+5 || p.x < 0 || p.y > H)
-			{
-				if(i%3 > 0) //66.67% of the flakes
-				{
-					particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d};
-				}
-				else
-				{
-					//If the flake is exitting from the right
-					if(Math.sin(angle) > 0)
-					{
-						//Enter from the left
-						particles[i] = {x: -5, y: Math.random()*H, r: p.r, d: p.d};
-					}
-					else
-					{
-						//Enter from the right
-						particles[i] = {x: W+5, y: Math.random()*H, r: p.r, d: p.d};
-					}
-				}
-			}
-		}
-	}
-	
-	//animation loop
-	setInterval(draw, 33);
-}
-
-
-
-
-
-
-});</script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
@@ -169,21 +70,15 @@ window.onload = function(){
     </nav>
 
 	<!-- Section: intro -->
-    <section id="intro" class="home-section text-center bg-dark">
-		<canvas id="canvas"></canvas>
-        <div class="slogan">
+    <section id="intro" class="home-section text-center bg-specx">
+		<div class="slogan">
             <div style="margin-top: 0px"> <br>
-                <!-- <div id="infom">
-                    <div class="col-sm-12 wow tada" data-wow-delay="3.0s"><font color="white" size="5">
-                    <strong>Have a Happy New Year!</strong>
-</font><br><br><br>
-                    </div></div> -->
-			<h4><font color="white" size="10">#1 Song This<span class="text_color"> Week</span> </font></h4>
-			<h4><font color="white" size="5">Zayn's "Pillow Talk"</font><br><br><br>
+			<h4><font color="black" size="10">#1 Song This<span class="text_color"> Week</span> </font></h4>
+			<h4><font color="black" size="5">Justin Bieber's "Love Yourself"</font><br><br><br>
 <div class="video_player">
   <div class="auto-resizable-iframe">
     <div>
-      <iframe width="640" height="360" src="https://www.youtube.com/embed/C_3d6GntKbk?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/oyEuk8j8imI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </div>
@@ -389,7 +284,7 @@ window.onload = function(){
                 
                 <!-- Contact Form-->
             
-                <div class="col-sm-6"><br>
+                <div class="col-sm-6 wow fadeInRight"><br>
                     <p><strong>Contact Form</strong></p>              
                 <form class="main-contact-form" action="//formspree.io/jack@djspecx.com" method="POST">
                 

@@ -422,6 +422,13 @@ hr {
 	background: url(http://i.imgur.com/GwqObb7.png) center no-repeat;
 }
 
+.bg-specx {
+	width:100%;
+	position:relative;
+	background: url(http://nexusandme.com/wp-content/uploads/2015/05/february.jpg) no-repeat;
+    background-size: cover
+}
+
 /* --- section color var --- */
 
 .text-light {

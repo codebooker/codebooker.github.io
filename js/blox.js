@@ -262,7 +262,7 @@ Blox.prototype.renderTimer = function()
 
 Blox.prototype.renderTiles = function()
 {
-	this.context.fillStyle = "#7e091b";
+	this.context.fillStyle = "#3dcdc8";
 
 	// Tiles
 	for (var y = 0; y < this.rows; y++)

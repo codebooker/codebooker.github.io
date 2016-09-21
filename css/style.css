@@ -183,7 +183,7 @@ a:focus {
 	    -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-	color: #000;
+	color: #fff;
 }
 
 .navbar-custom ul.nav ul.dropdown-menu {
@@ -431,7 +431,7 @@ hr {
 .bg-specx {
 	width:100%;
 	position:relative;
-	background: url(https://i.imgur.com/EjkaELd.jpg) no-repeat;
+	background: url(../img/city.jpg) no-repeat;
     background-size:cover;
     background-position: center;
 }

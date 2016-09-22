@@ -288,23 +288,23 @@ DISABLED REDIRECT -->
                 <!-- Contact Form-->
             
                 <div class="col-sm-6 wow fadeInRight"><br>
-                    <p><strong>Contact Form</strong></p>              
-                <form class="main-contact-form" action="//formspree.io/jack@djspecx.com" method="POST">
-                
-                      <input type="text" name="name" class="form-control" placeholder="Name" required="required">
-                    
-                      <input type="email" name="_replyto" class="form-control" placeholder="Email Address" required="required">
-                    
-                  <input type="text" name="_subject" class="form-control" placeholder="Subject" required="required">
-                
-                  <textarea name="message" class="form-control" rows="4" placeholder="Enter your message" required="required"></textarea>
-                <br>
-                  <button type="submit" value="Send" class="btn-submit">Send Now</button>
-                
-              </form>   
-            </div>
-				
-                    </div>
+                    <p><strong>Contact Form</strong></p>  
+                    <div id="des" >   
+                    <form id="contact-form" action="//formspree.io/jack@djspecx.com" method="post">
+	                       <input type="text" name="Name" placeholder="Name" required><br>
+	                       <input type="email" name="Email" placeholder="Email" required><br>
+	                       <textarea name="Message" cols="30" rows="6" placeholder="Message" required></textarea><br>
+	                       <!-- CONFIG -->
+	                       <input class="hidden" type="text" name="_gotcha">
+	                       <input type="hidden" name="_subject" value="Subject">
+	                       <input type="hidden" name="_cc" value="email@cc.com">
+	                       <!-- /CONFIG -->
+                    	   <input class="submit" type="submit" value="Send">
+                        </form>
+                    </div> 
+                    <div id="des1" class="des1"><h2>Form Sent!<br>Thank You For Your Submission</h2></div>
+                </div>
+        </div>
 
 		<!-- End of Contact Form-->
     
@@ -338,6 +338,42 @@ DISABLED REDIRECT -->
 	<script src="js/wow.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.js"></script>
+
+<script>
+var $contactForm = $('#contact-form');
+
+$contactForm.submit(function(e) {
+	e.preventDefault();
+	var $submit = $('input:submit', $contactForm);
+	var defaultSubmitText = $submit.val();
+
+	$.ajax({
+		url: '//formspree.io/your@email.com',
+		method: 'POST',
+		data: $(this).serialize(),
+		dataType: 'json',
+		beforeSend: function() {
+			//$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+			$submit.attr('disabled', true).val('Sending message…');
+		},
+		success: function(data) {
+			document.getElementById("des").style.visibility = "hidden";
+            document.getElementById("des").style.height = "0";
+            document.getElementById("des1").style.visibility = "visible";
+            document.getElementById("des1").style.height = "100%";
+		},
+		error: function(err) {
+			//$contactForm.find('.alert--loading').hide();
+			//$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+			$submit.val('Ops, there was an error.');
+			setTimeout(function() {
+				//$('.alert--error').remove();
+				$submit.attr('disabled', false).val(defaultSubmitText);
+			}, 5000);
+		}
+	});
+});
+</script>
 
 </body>
 

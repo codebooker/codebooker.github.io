@@ -162,8 +162,8 @@ a:focus {
 
 .nav.navbar-nav {
     background-color: rgba(255,255,255,.4);
-    padding-bottom: 0px;
-    overflow-y:hidden;
+    padding-bottom: 20px;
+    overflow-y: hidden;
 }
 
 .navbar-custom.top-nav-collapse .nav.navbar-nav {
@@ -1051,14 +1051,14 @@ header {
 
 #form {
   position: relative;
-  width: 500px;
+  width: 450px;
   margin: 50px auto 100px auto;
 }
 
 input {
   font-family: 'Lato', sans-serif;
   font-size: 1em;
-  width: 470px;
+  width: 420px;
   height: 50px;
   padding: 0px 15px 0px 15px;
   font-weight: 400;
@@ -1082,8 +1082,8 @@ input:hover {
 }
 
 textarea {
-  width: 470px;
-  max-width: 470px;
+  width: 420px;
+  max-width: 420px;
   height: 110px;
   max-height: 110px;
   padding: 15px;

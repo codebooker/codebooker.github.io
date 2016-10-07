@@ -88,6 +88,39 @@
 
     <!-- main-container -->
     <div class="container main-container">
+        <div class="1des">
+        <form action="//formspree.io/jack@djspecx.com" method="post">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-contact">
+                            <input type="text" name="name">
+                            <span style="color:#393939">your name</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-contact">
+                            <input type="email" name="Email">
+                            <span style="color:#393939">your email</span>
+                        </div>
+                    </div>
+                    <!-- CONFIG -->
+                    <input class="hidden" type="text" name="_gotcha">
+                    <input type="hidden" name="_subject" value="DJ Specx Contact Form Submission Received">
+	                <!-- <input type="hidden" name="_cc" value="email@cc.com">
+	                <!-- /CONFIG -->
+                    <div class="col-md-12">
+                        <div class="textarea-contact">
+                            <textarea name="Message"></textarea>
+                            <span style="color:#393939">message</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="submit" class="btn btn-box submit" value="Send"></input>
+                    </div>
+                </div>
+            </form>
+        </div>
+    <div id="1des1" class="des1"><h2>Form Sent!<br>Thank You For Your Submission</h2></div>
         <div class="hidden-sm col-md-6 col-md-6 hidden-xs"> 
                     <div id="des" ><br>  
                     <form id="contact-form" action="//formspree.io/jack@djspecx.com" method="post">
@@ -128,6 +161,79 @@
     </footer>
     <!-- end footer -->
 
+    <!-- Contact Form Script-->
+    <script>
+var $contactForm = $('#contact-form');
+
+$contactForm.submit(function(e) {
+	e.preventDefault();
+	var $submit = $('input:submit', $contactForm);
+	var defaultSubmitText = $submit.val();
+
+	$.ajax({
+		url: '//formspree.io/jack@djspecx.com',
+		method: 'POST',
+		data: $(this).serialize(),
+		dataType: 'json',
+		beforeSend: function() {
+			//$contactForm.append('<div class="alert alert--loading">Sending messageâ€¦</div>');
+			$submit.attr('disabled', true).val('Sending messageâ€¦');
+		},
+		success: function(data) {
+			document.getElementById("des").style.visibility = "hidden";
+            document.getElementById("des").style.height = "0";
+            document.getElementById("des1").style.visibility = "visible";
+            document.getElementById("des1").style.height = "100%";
+		},
+		error: function(err) {
+			//$contactForm.find('.alert--loading').hide();
+			//$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+			$submit.val('Ops, there was an error.');
+			setTimeout(function() {
+				//$('.alert--error').remove();
+				$submit.attr('disabled', false).val(defaultSubmitText);
+			}, 5000);
+		}
+	});
+});
+</script>
+    <script>
+var $contactForm = $('#contact-form');
+
+$contactForm.submit(function(e) {
+	e.preventDefault();
+	var $submit = $('input:submit', $contactForm);
+	var defaultSubmitText = $submit.val();
+
+	$.ajax({
+		url: '//formspree.io/jack@djspecx.com',
+		method: 'POST',
+		data: $(this).serialize(),
+		dataType: 'json',
+		beforeSend: function() {
+			//$contactForm.append('<div class="alert alert--loading">Sending messageâ€¦</div>');
+			$submit.attr('disabled', true).val('Sending messageâ€¦');
+		},
+		success: function(data) {
+			document.getElementById("1des").style.visibility = "hidden";
+            document.getElementById("1des").style.height = "0";
+            document.getElementById("1des1").style.visibility = "visible";
+            document.getElementById("1des1").style.height = "100%";
+		},
+		error: function(err) {
+			//$contactForm.find('.alert--loading').hide();
+			//$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+			$submit.val('Ops, there was an error.');
+			setTimeout(function() {
+				//$('.alert--error').remove();
+				$submit.attr('disabled', false).val(defaultSubmitText);
+			}, 5000);
+		}
+	});
+});
+</script>
+
+    
     <!-- back to top -->
     <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
     <!-- end back to top -->

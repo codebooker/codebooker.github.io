@@ -483,7 +483,7 @@ h7 {
     left: 50%;
     margin-left: -12px;
     border-radius: 15px;
-    border: 2px solid #888;
+    border: 2px solid #393939;
     -webkit-animation: intro 1s;
     animation: intro 1s;
 }
@@ -494,7 +494,7 @@ h7 {
     height: 3px;
     margin: 6px auto;
     border-radius: 4px;
-    background: #888;
+    background: #393939;
     -webkit-animation: finger 2s infinite;
     animation: finger 2s infinite;
 }
@@ -1071,6 +1071,19 @@ footer img {
 }
 
 .input-contact input[type="text"] {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    padding: 0 20px;
+    float: left;
+    position: relative;
+    background-color: transparent;
+    z-index: 2;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+
+.input-contact input[type="email"] {
     height: 100%;
     width: 100%;
     border: 0;

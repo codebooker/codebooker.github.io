@@ -1,11 +1,7 @@
 $(window).load(function () {
-
-    // preloader
-    (function () {
-        $('#status').fadeOut();
-        $('#preloader').delay(200).fadeOut('slow');
-    }());
-
+    
+    //preloader
+    $("#preloader").fadeTo(2000,1).fadeOut(1000);
 
     //  isotope
     var $container = $('.portfolio_container');

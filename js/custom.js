@@ -1,38 +1,63 @@
-(function ($) {
+$(window).load(function () {
 
-	new WOW().init();
+    // preloader
+    $('#status').fadeOut(); // will first fade out the loading animation
+    $('#preloader').delay(550).fadeOut('slow'); // will fade out the white DIV that covers the website.
+    $('body').delay(550).css({
+        'overflow': 'visible'
+    });
 
-	jQuery(window).load(function() { 
-		jQuery("#preloader").delay(100).fadeOut("slow");
-		jQuery("#load").delay(100).fadeOut("slow");
-	});
 
+    //  isotope
+    var $container = $('.portfolio_container');
+    $container.isotope({
+        filter: '*',
+    });
 
-	//jQuery to collapse the navbar on scroll
-	$(window).scroll(function() {
-		if ($(".navbar").offset().top > 50) {
-			$(".navbar-fixed-top").addClass("top-nav-collapse");
-		} else {
-			$(".navbar-fixed-top").removeClass("top-nav-collapse");
-		}
-	});
+    $('.portfolio_filter a').click(function () {
+        $('.portfolio_filter .active').removeClass('active');
+        $(this).addClass('active');
 
-	//jQuery for page scrolling feature - requires jQuery Easing plugin
-	$(function() {
-		$('.navbar-nav li a').bind('click', function(event) {
-			var $anchor = $(this);
-			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top
-			}, 1500, 'easeInOutExpo');
-			event.preventDefault();
-		});
-		$('.page-scroll a').bind('click', function(event) {
-			var $anchor = $(this);
-			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top
-			}, 1500, 'easeInOutExpo');
-			event.preventDefault();
-		});
-	});
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 500,
+                animationEngine: "jquery"
+            }
+        });
+        return false;
+    });
 
-})(jQuery);
+    // back to top
+    var offset = 300,
+        offset_opacity = 1200,
+        scroll_top_duration = 700,
+        $back_to_top = $('.cd-top');
+
+    //hide or show the "back to top" link
+    $(window).scroll(function () {
+        ($(this).scrollTop() > offset) ? $back_to_top.addClass('cd-is-visible'): $back_to_top.removeClass('cd-is-visible cd-fade-out');
+        if ($(this).scrollTop() > offset_opacity) {
+            $back_to_top.addClass('cd-fade-out');
+        }
+    });
+
+    //smooth scroll to top
+    $back_to_top.on('click', function (event) {
+        event.preventDefault();
+        $('body,html').animate({
+            scrollTop: 0,
+        }, scroll_top_duration);
+    });
+
+    // input
+    $(".input-contact input, .textarea-contact textarea").focus(function () {
+        $(this).next("span").addClass("active");
+    });
+    $(".input-contact input, .textarea-contact textarea").blur(function () {
+        if ($(this).val() === "") {
+            $(this).next("span").removeClass("active");
+        }
+    });
+});

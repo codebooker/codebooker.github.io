@@ -45,7 +45,7 @@ Cat = function(){
   });
 
   var whiteMat = new THREE.MeshLambertMaterial ({
-    color: 0xffffff, 
+    color: 0xfafafa, 
     shading:THREE.FlatShading
   });
 

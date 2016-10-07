@@ -47,7 +47,9 @@ body {
     height: 100%;
     font-family: 'Poppins', sans-serif;
     line-height: 1.8;
-    color: #999
+    color: #999;
+    backface-visibility: visible;
+    background-color: lightgray;
 }
 
 .no-padding {
@@ -90,6 +92,9 @@ a {
     font-size: 11px;
 }
 
+hr {
+    border-color: #595959;
+}
 
 /* typography
 ==================================================*/
@@ -98,6 +103,10 @@ h1 {
     color: #393939;
     font-size: 60px;
     text-transform: uppercase;
+}
+
+h2 {
+    color:#393939;
 }
 
 h3 {
@@ -109,7 +118,7 @@ h5 {
 }
 
 h7 {
-    color: #393939;
+    color: #009999;
     font-family: DAYPBL;
     font-size: 10em;
 }
@@ -196,7 +205,7 @@ h7 {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: #d3d3d3;
     height: 50px;
     width: 100%;
     z-index: 3;
@@ -223,7 +232,7 @@ h7 {
 .box-header.is-fixed {
     position: fixed;
     top: -80px;
-    background-color: rgba(255, 255, 255, 0.96);
+    background-color: #d3d3d3;
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
@@ -250,7 +259,7 @@ h7 {
     top: 0;
     height: 100%;
     width: 50px;
-    background-color: #fff;
+    background-color: #d3d3d3;
 }
 
 .box-primary-nav-trigger .box-menu-text {
@@ -840,7 +849,7 @@ h7 {
 footer {
     padding: 30px 0;
     text-align: center;
-    background: #f5f5f5
+    background: #393939
 }
 
 .copyright {

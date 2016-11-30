@@ -28,16 +28,17 @@
 ==================================================*/
 
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700);
-
 @font-face {
     font-family: 'DAYPBL';
     src: url('../fonts/DAYPBL.eot');
-    src: url('../fonts/DAYPBL.eot') format('embedded-opentype'),
-         url('../fonts/DAYPBL.woff2') format('woff2'),
-         url('../fonts/DAYPBL.woff') format('woff'),
-         url('../fonts/DAYPBL.ttf') format('truetype'),
-         url('../fonts/DAYPBL.svg#DAYPBL') format('svg');
+    src: url('../fonts/DAYPBL.eot') format('embedded-opentype'), url('../fonts/DAYPBL.woff2') format('woff2'), url('../fonts/DAYPBL.woff') format('woff'), url('../fonts/DAYPBL.ttf') format('truetype'), url('../fonts/DAYPBL.svg#DAYPBL') format('svg');
 }
+
+@font-face {
+    font-family: 'Christmas';
+    src: url('../fonts/MerryChristmasFlake.ttf');
+}
+
 
 /* General
 ==================================================*/
@@ -47,9 +48,9 @@ body {
     height: 100%;
     font-family: 'Poppins', sans-serif;
     line-height: 1.8;
-    color: #999;
+    color: #393939;
     backface-visibility: visible;
-    background-color: lightgray;
+    background-color: white;
 }
 
 .no-padding {
@@ -96,6 +97,7 @@ hr {
     border-color: #595959;
 }
 
+
 /* typography
 ==================================================*/
 
@@ -106,7 +108,7 @@ h1 {
 }
 
 h2 {
-    color:#393939;
+    color: #393939;
 }
 
 h3 {
@@ -118,10 +120,11 @@ h5 {
 }
 
 h7 {
-    color: #009999;
+    color: white;
     font-family: DAYPBL;
     font-size: 10em;
 }
+
 
 /* preloader
 ==================================================*/
@@ -232,7 +235,7 @@ h7 {
 .box-header.is-fixed {
     position: fixed;
     top: -80px;
-    background-color: #d3d3d3;
+    background-color: #999;
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
@@ -245,7 +248,7 @@ h7 {
 }
 
 .box-header.menu-is-open {
-    background-color: rgba(255, 255, 255, 0.96);
+    background-color: black;
 }
 
 .box-logo {
@@ -399,6 +402,7 @@ h7 {
     text-decoration: none;
     font-weight: bold;
 }
+
 .box-primary-nav a:focus {
     outline: none;
 }
@@ -464,10 +468,10 @@ h7 {
     text-align: center;
 }
 
-.box-intro h5 {
+.box-intro h3 {
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #999;
+    color: #555;
     line-height: 1.7;
     text-align: center;
 }
@@ -483,7 +487,7 @@ h7 {
     left: 50%;
     margin-left: -12px;
     border-radius: 15px;
-    border: 2px solid #393939;
+    border: 2px solid #fff;
     -webkit-animation: intro 1s;
     animation: intro 1s;
 }
@@ -494,7 +498,7 @@ h7 {
     height: 3px;
     margin: 6px auto;
     border-radius: 4px;
-    background: #393939;
+    background: #fff;
     -webkit-animation: finger 2s infinite;
     animation: finger 2s infinite;
 }
@@ -926,7 +930,7 @@ footer img {
     font-size: 60px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #999;
+    color: #555;
     line-height: 50px;
 }
 
@@ -934,11 +938,11 @@ footer img {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 500;
-    color: #777;
+    color: #555;
 }
 
 .top-bar p a {
-    color: #777;
+    color: #555;
 }
 
 .top-bar p a:hover,
@@ -962,7 +966,7 @@ footer img {
     font-size: 60px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #999;
+    color: #555;
     line-height: 50px;
 }
 
@@ -970,11 +974,11 @@ footer img {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 500;
-    color: #777;
+    color: #555;
 }
 
 .top-bar2 p a {
-    color: #777;
+    color: #555;
 }
 
 .top-bar2 p a:hover,
@@ -982,6 +986,7 @@ footer img {
     color: #555;
     text-decoration: none;
 }
+
 .social-ul {
     list-style: none;
     display: inline-block;
@@ -1249,171 +1254,184 @@ textarea:focus {
     }
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #333;
-  font-size: 0.875em;
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #333;
+    font-size: 0.875em;
 }
 
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
-  color: #333;
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: #333;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #333;
-  font-size: 0.875em;
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #333;
+    font-size: 0.875em;
 }
 
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
-  color: #333;
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+    color: #333;
 }
 
-input::placeholder, textarea::placeholder {
-  color: #333;
-  font-size: 0.875em;
+input::placeholder,
+textarea::placeholder {
+    color: #333;
+    font-size: 0.875em;
 }
 
-input:focus::placeholder, textarea::focus:placeholder {
-  color: #333;
+input:focus::placeholder,
+textarea::focus:placeholder {
+    color: #333;
 }
 
-input::-ms-placeholder, textarea::-ms-placeholder {
-  color: #333;
-  font-size: 0.875em;
+input::-ms-placeholder,
+textarea::-ms-placeholder {
+    color: #333;
+    font-size: 0.875em;
 }
 
-input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
-  color: #333;
+input:focus::-ms-placeholder,
+textarea:focus::-ms-placeholder {
+    color: #333;
 }
+
 
 /* on hover placeholder */
 
-input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
-  color: #fff;
-  font-size: 0.875em;
+input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder {
+    color: #fff;
+    font-size: 0.875em;
 }
 
-input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
-  color: #fff;
+input:hover:focus::-webkit-input-placeholder,
+textarea:hover:focus::-webkit-input-placeholder {
+    color: #fff;
 }
 
-input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
-  color: #fff;
-  font-size: 0.875em;
+input:hover::-moz-placeholder,
+textarea:hover::-moz-placeholder {
+    color: #fff;
+    font-size: 0.875em;
 }
 
-input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
-  color: #fff;
+input:hover:focus::-moz-placeholder,
+textarea:hover:focus::-moz-placeholder {
+    color: #fff;
 }
 
-input:hover::placeholder, textarea:hover::placeholder {
-  color: #fff;
-  font-size: 0.875em;
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #fff;
+    font-size: 0.875em;
 }
 
-input:hover:focus::placeholder, textarea:hover:focus::placeholder {
-  color: #fff;
+input:hover:focus::placeholder,
+textarea:hover:focus::placeholder {
+    color: #fff;
 }
 
-input:hover::placeholder, textarea:hover::placeholder {
-  color: #fff;
-  font-size: 0.875em;
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #fff;
+    font-size: 0.875em;
 }
 
-input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
-  color: #fff;
+input:hover:focus::-ms-placeholder,
+textarea:hover::focus:-ms-placeholder {
+    color: #fff;
 }
 
-}
 
+}
 header {
-  position: relative;
-  margin: 100px 0 25px 0;
-  font-size: 2.3em;
-  text-align: center;
-  letter-spacing: 7px;
+    position: relative;
+    margin: 100px 0 25px 0;
+    font-size: 2.3em;
+    text-align: center;
+    letter-spacing: 7px;
 }
-
 #form {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
-
 input {
-  font-family: 'Lato', sans-serif;
-  font-size: 1em;
-  width: 100%;
-  height: 50px;
-  padding: 0px 15px 0px 15px;
-  font-weight: 400;
-  
-  background: transparent;
-  outline: none;
-  color: #333;
-  
-  border: solid 1px #333;
-  border-bottom: none;
-  
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    width: 100%;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    font-weight: 400;
+    background: transparent;
+    outline: none;
+    color: #333;
+    border: solid 1px #333;
+    border-bottom: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
 }
-
 input:hover {
-  background: #009999;
-  color: #fff;
+    background: #009999;
+    color: #fff;
 }
-
 textarea {
-  width: 100%;
-  height: 110px;
-  max-height: 110px;
-  padding: 15px;
-  font-weight: 400;
-  resize: none;
-  
-  background: transparent;
-  outline: none;
-  
-  color: #333;
-  font-family: 'Lato', sans-serif;
-  font-size: 1em;
-  
-  border: solid 1px #333;
-  
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 110px;
+    max-height: 110px;
+    padding: 15px;
+    font-weight: 400;
+    resize: none;
+    background: transparent;
+    outline: none;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    border: solid 1px #333;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
 }
-
 textarea:hover {
-  background: #009999;
-  color: #fff;
+    background: #009999;
+    color: #fff;
 }
-
 #submit {
-  width: 100%;
-  
-  padding: 0;
-  margin: -5px 0px 0px 0px;
-  
-  font-family: 'Lato', sans-serif;
-  font-size: 2em;
-  color: #333;
-  
-  outline:none;
-  cursor: pointer;
-  
-  border: solid 1px #b3aca7;
-  border-top: none;
+    width: 100%;
+    padding: 0;
+    margin: -5px 0px 0px 0px;
+    font-family: 'Lato', sans-serif;
+    font-size: 2em;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    border: solid 1px #b3aca7;
+    border-top: none;
 }
-
 #submit:hover {
-  color: #009999;
+    color: #009999;
+}
+.des1 {
+    visibility: hidden;
+    height: 0;
 }
 
-.des1 {
- visibility: hidden;
-height: 0;
+/* Christmas Stuff */
+.wrappingPaper {
+    background-image: repeating-linear-gradient( 90deg, firebrick, firebrick 20px, beige 0, beige 25px, forestgreen 0, forestgreen 35px, gold 0, gold 40px, crimson 0, crimson 60px), repeating-linear-gradient( firebrick, firebrick 20px, beige 0, beige 25px, forestgreen 0, forestgreen 35px, gold 0, gold 40px, crimson 0, crimson 60px);
+    background-blend-mode: multiply;
+}
+.christmas-green {
+    color: forestgreen;
+}
+.christmas-red {
+    color: firebrick;
+}
+.christmasFont {
+    font-family: 'Christmas';
 }
